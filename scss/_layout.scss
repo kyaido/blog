@@ -26,24 +26,16 @@ body {
   margin: 50px 0 0;
 }
 #headInner {
-  width: $contentsWidth;
+  max-width: $contentsWidth;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
   box-sizing: border-box;
   background-color: #fff;
 }
 
 /* logo */
 .logo {
-}
-
-
-
-/* -------------------------------------
- * nav
-------------------------------------- */
-#nav {
-  clear: both;
+  text-align: center;
 }
 
 
@@ -59,13 +51,12 @@ body {
 
 /* main */
 #main {
-  width: $contentsWidth;
+  max-width: $contentsWidth;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
   box-sizing: border-box;
   background-color: #fff;
 }
-
 
 
 /* -------------------------------------
@@ -77,16 +68,32 @@ body {
   margin: 50px 0 0;
 }
 #footInner {
-  width: $contentsWidth;
+  max-width: $contentsWidth;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
   box-sizing: border-box;
   background-color: #fff;
 }
 
-/* copyright */
-.copyright {
-  display: block;
-  padding: 10px;
+/* nav */
+#nav {
   text-align: center;
+}
+#nav li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+/* about */
+.about {
+  clear: both;
+  margin: 20px 0 0;
+}
+.about .social {
+  text-align: center;
+}
+.about .social li {
+  display: inline-block;
+  margin: 0 5px;
+  font-size: 24px;
 }

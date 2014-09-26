@@ -10,6 +10,8 @@
 <meta property="og:site_name" content="">
 <meta property="og:description" content="">
 <meta property="og:image" content="">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/monokai.min.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="js/modernizr-2.8.3.min.js"></script>
 </head>
@@ -18,7 +20,88 @@
   
   <header id="header" role="banner">
     <div id="headInner">
-      <h1 class="logo">logo</h1>
+      <h1 class="logo"><a href="#">logo</a></h1>
+    </div>
+    <!-- /header -->
+  </header>
+  
+  <div id="content">
+    <main id="main" role="main">
+      <article class="entry">
+        <header class="entryHeader">
+          <p class="entryDate"><time datetime="2014-09-01">2014/09/01</time></p>
+          <h1 class="entryTitle"><a href="#">タイトル</a></h1>
+        </header>
+        <div class="entryContent">
+          <p>本文です。<br>
+          本文です。<br>
+          本文です。</p>
+          <p>本文です。<br>
+          本文です。<br>
+          本文です。</p>
+          <hr>
+          <p>本文です。<a href="#">本文です。</a>本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。</p>
+          <h2>h2要素です</h2>
+          <h3>h3要素です</h3>
+          <ul>
+            <li>リストです</li>
+            <li>リストです<br>リストです<br>リストです</li>
+          </ul>
+          <ol>
+            <li>順序つきリストです</li>
+            <li>順序つきリストです<br>順序つきリストです<br>順序つきリストです</li>
+          </ol>
+          <pre>
+<code>body:after {
+  content: "hello, world";
+}</code>
+          </pre>
+        </div>
+        <!-- /entry -->
+      </article>
+      <article class="entry">
+        <header class="entryHeader">
+          <p class="entryDate"><time datetime="2014-09-01">2014/09/01</time></p>
+          <h1 class="entryTitle"><a href="#">タイトル</a></h1>
+        </header>
+        <div class="entryContent">
+          <p>本文です。<br>
+          本文です。<br>
+          本文です。</p>
+          <p>本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。本文です。</p>
+        </div>
+        <!-- /entry -->
+      </article>
+      
+      <section class="archive">
+        <h1 class="archiveTitle">archive title</h1>
+        <ul class="archiveEntryList">
+          <li>
+            <p class="archiveEntryDate"><time datetime="2014-09-01">2014/09/01</time></p>
+            <p class="archiveEntryTitle"><a href="#">タイトル</a></p>
+          </li>
+          <li>
+            <p class="archiveEntryDate"><time datetime="2014-09-01">2014/09/01</time></p>
+            <p class="archiveEntryTitle"><a href="#">タイトル</a></p>
+          </li>
+          <li>
+            <p class="archiveEntryDate"><time datetime="2014-09-01">2014/09/01</time></p>
+            <p class="archiveEntryTitle"><a href="#">タイトル</a></p>
+          </li>
+          <li>
+            <p class="archiveEntryDate"><time datetime="2014-09-01">2014/09/01</time></p>
+            <p class="archiveEntryTitle"><a href="#">タイトル</a></p>
+          </li>
+        </ul>
+        <!-- /archive -->
+      </section>
+      <!-- /main -->
+    </main>
+    <!-- /content -->
+  </div>
+  
+  <footer id="footer" role="contentinfo">
+    <div id="footInner">
       <nav id="nav" role="navigation">
         <ul>
           <li><a href="#">HOME</a></li>
@@ -28,21 +111,12 @@
         </ul>
         <!-- /nav -->
       </nav>
-    </div>
-    <!-- /header -->
-  </header>
-  
-  <div id="content">
-    <main id="main" role="main">
-      <p>main</p>
-      <!-- /main -->
-    </main>
-    <!-- /content -->
-  </div>
-  
-  <footer id="footer" role="contentinfo">
-    <div id="footInner">
-      <small class="copyright">copyright</small>
+      <div class="about">
+        <ul class="social">
+          <li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
+          <li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
+        </ul>
+      </div>
     </div>
     <!-- /footer -->
   </footer>
@@ -51,6 +125,8 @@
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
 <script src="js/common.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
