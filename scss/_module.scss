@@ -83,6 +83,14 @@
 .entry .entryContent a:focus {
   color: darken($link-base-color, 10%);
 }
+.entry .entryContent :not(pre) code {
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0 5px;
+  background-color: #fbfbfb;
+  border: #ccc 1px solid;
+  font-family: monospace;
+}
 
 /* archive */
 .archive {
