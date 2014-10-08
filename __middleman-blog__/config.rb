@@ -24,9 +24,9 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 
   # Enable pagination
-  # blog.paginate = true
-  # blog.per_page = 10
-  # blog.page_link = "page/{num}"
+  blog.paginate = true
+  blog.per_page = 10
+  blog.page_link = "page/{num}"
 end
 
 page "/feed.xml", layout: false
@@ -36,9 +36,10 @@ page "/feed.xml", layout: false
 ###
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  config.output_style = :compressed
+  config.line_comments = false
+end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -69,7 +70,7 @@ page "/feed.xml", layout: false
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# activate :livereload
+activate :livereload, :host => `hostname`.chomp
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -78,11 +79,13 @@ page "/feed.xml", layout: false
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'css'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'js'
 
-set :images_dir, 'images'
+set :images_dir, 'img'
+
+activate :autoprefixer, browsers: ['last 2 version', 'Explorer >= 9', 'android 4']
 
 # Build-specific configuration
 configure :build do

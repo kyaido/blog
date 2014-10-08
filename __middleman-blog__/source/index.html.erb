@@ -1,24 +1,30 @@
 ---
 pageable: true
-per_page: 10
+per_page: 2
 ---
+
+<section class="archive">
+  <h1 class="archiveTitle">archive title</h1>
+  <ul class="archiveEntryList">
+    <% page_articles.each_with_index do |article, i| %>
+      <li>
+        <p class="archiveEntryDate"><time datetime="<%= article.date.strftime('%Y-%m-%d') %>"><%= article.date.strftime('%Y/%m/%d') %></time></p>
+        <p class="archiveEntryTitle"><%= link_to article.title, article %></p>
+      </li>
+    <% end %>
+  </ul>
+</section>
+
+
 <% if paginate && num_pages > 1 %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
-  <!-- use article.summary(250) if you have Nokogiri available to show just
-       the first 250 characters -->
-  <%= article.body %>
+  <p class="pagination">Page <%= page_number %> of <%= num_pages %></p>
 <% end %>
 
 <% if paginate %>
+  <% if prev_page %>
+    <p class="pagination prev"><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
   <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
+    <p class="pagination next"><%= link_to 'Next page', next_page %></p>
   <% end %>
 <% end %>
