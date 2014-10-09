@@ -1,0 +1,14 @@
+<% wrap_layout :layout do %>
+  <!-- TODO:現在の記事のとってきかた -->
+  <% if current_article %>
+  <article class="entry">
+    <header class="entryHeader">
+      <p class="entryDate"><time datetime="<%= current_article.date.strftime('%Y-%m-%d') %>"><%= current_article.date.strftime('%Y/%m/%d') %></time></p>
+      <h1 class="entryTitle"><%= current_article.title %></h1>
+    </header>
+    <div class="entryContent">
+      <%= yield %>
+    </div>
+  </article>
+  <% end %>
+<% end %>
