@@ -18,6 +18,9 @@ a:link {
   text-decoration: none;
   transition: color .2s;
 }
+a:visited {
+  color: $text-base-color;
+}
 a:hover,
 a:active,
 a:focus {

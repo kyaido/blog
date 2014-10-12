@@ -108,3 +108,30 @@
 .archive .archiveEntryList .archiveEntryTitle {
   font-size: 20px;
 }
+
+/* pagination */
+.pagination {
+  clear: both;
+  margin: 40px 0 0;
+  // text-align: center;
+}
+.pagination ul {
+  // display: inline-block;
+}
+.pagination li,
+.pagination .sibling {
+  display: inline-block;
+  margin: 0 2px 5px;
+}
+.pagination li a,
+.pagination .sibling a {
+  display: inline-block;
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0 10px;
+  background-color: lighten($link-base-color, 20%);
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+}

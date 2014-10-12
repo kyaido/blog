@@ -20,7 +20,7 @@
   
   <header id="header" role="banner">
     <div id="headInner">
-      <h1 class="logo"><a href="#">logo</a></h1>
+      <h1 class="logo"><%= link_to 'logo', '/' %></h1>
     </div>
     <!-- /header -->
   </header>
@@ -39,10 +39,9 @@
     <div id="footInner">
       <nav id="nav" role="navigation">
         <ul>
-          <li><a href="#">HOME</a></li>
+          <li><%= link_to 'HOME', '/' %></li>
           <li><a href="#">ARCHIVES</a></li>
           <li><a href="#">SEARCH</a></li>
-          <li><a href="#">RSS</a></li>
         </ul>
         <!-- /nav -->
       </nav>
@@ -50,6 +49,7 @@
         <ul class="social">
           <li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
           <li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
+          <li><a href="#" target="_blank"><i class="icon-feed"></i></a></li>
         </ul>
       </div>
     </div>

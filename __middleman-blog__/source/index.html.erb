@@ -15,16 +15,63 @@ per_page: 2
   </ul>
 </section>
 
+<% if paginate %>
+  <div class="pagination">
+    <ul>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+    </ul>
+    <% if prev_page %>
+      <p class="sibling prev"><%= link_to '&laquo; Prev', prev_page %></p>
+    <% end %>
+    <% if next_page %>
+      <p class="sibling next"><%= link_to 'Next &raquo;', next_page %></p>
+    <% end %>
+  </div>
+<% end %>
+
 
 <% if paginate && num_pages > 1 %>
+  <% num_pages.times do |i| %>
+    <%= link_to i + 1, current_path %>
+  <% end %>
   <p class="pagination">Page <%= page_number %> of <%= num_pages %></p>
 <% end %>
+<!-- 自作 -->
 
-<% if paginate %>
-  <% if prev_page %>
-    <p class="pagination prev"><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-  <% if next_page %>
-    <p class="pagination next"><%= link_to 'Next page', next_page %></p>
-  <% end %>
-<% end %>
+<!-- http://www.slevenbits.com/blog/2013/01/middleman-blog-pagination.html -->
+<div class="pagination">
+  <ul>
+    <li>
+      <% if prev_page %>
+        <%= link_to "Prev", prev_page.url %>
+      <% else %>
+        <span>Prev</span>
+      <% end %>
+    </li>
+    <% (page_number - 2 .. page_number + 2).select{|i| i > 0 && i <= num_pages}.each do |i| %>
+      <% if i == page_number %>
+        <li class="active">
+          <span>
+            <%= i %>
+          </span>
+        </li>
+      <% else %>
+        <li>
+          <% p = nil %>
+          <% (i ... page_number).each do p = p ? p.metadata[:locals]['prev_page'] : prev_page; end %>
+          <% (page_number ... i).each do p = p ? p.metadata[:locals]['next_page'] : next_page; end %>
+          <%= link_to "#{i}", p && p.url %>
+        </li>
+      <% end %>
+    <% end %>
+    <li>
+      <% if next_page %>
+        <%= link_to "Next", next_page.url %>
+      <% else %>
+        <span>Next</span>
+      <% end %>
+    </li>
+  </ul>
+</div>
