@@ -10,6 +10,7 @@
 <meta property="og:site_name" content="">
 <meta property="og:description" content="">
 <meta property="og:image" content="">
+<%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/monokai.min.css">
 <%= stylesheet_link_tag 'style' %>
@@ -18,38 +19,33 @@
 <body>
 <div id="wrapper">
   
-  <header id="header" role="banner">
-    <div id="headInner">
-      <h1 class="logo"><%= link_to 'logo', '/' %></h1>
+  <div class="aboveFooter">
+    <header id="header" role="banner">
+      <div id="headInner">
+        <h1 class="logo"><%= link_to 'You are what you eat', '/' %></h1>
+      </div>
+      <!-- /header -->
+    </header>
+    
+    <div id="content">
+      <main id="main" role="main">
+        
+        <%= yield %>
+        
+        <!-- /main -->
+      </main>
+      <!-- /content -->
     </div>
-    <!-- /header -->
-  </header>
-  
-  <div id="content">
-    <main id="main" role="main">
-      
-      <%= yield %>
-      
-      <!-- /main -->
-    </main>
-    <!-- /content -->
+    <!-- /aboveFooter -->
   </div>
   
   <footer id="footer" role="contentinfo">
     <div id="footInner">
-      <nav id="nav" role="navigation">
-        <ul>
-          <li><%= link_to 'HOME', '/' %></li>
-          <li><a href="#">ARCHIVES</a></li>
-          <li><a href="#">SEARCH</a></li>
-        </ul>
-        <!-- /nav -->
-      </nav>
       <div class="about">
         <ul class="social">
-          <li><a href="#" target="_blank"><i class="icon-twitter"></i></a></li>
-          <li><a href="#" target="_blank"><i class="icon-github"></i></a></li>
-          <li><a href="#" target="_blank"><i class="icon-feed"></i></a></li>
+          <li><a href="https://twitter.com/kyaido" target="_blank"><i class="icon-twitter"></i></a></li>
+          <li><a href="https://github.com/kyaido" target="_blank"><i class="icon-github"></i></a></li>
+          <li><%= link_to "<i class=\"icon-feed\"></i>", "#{blog.options.prefix.to_s}/feed.xml", :target => "_blank" %></li>
         </ul>
       </div>
     </div>

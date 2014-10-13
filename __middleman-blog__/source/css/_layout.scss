@@ -23,7 +23,6 @@ body {
 #header {
   clear: both;
   width: 100%;
-  margin: 50px 0 0;
 }
 #headInner {
   max-width: $contentsWidth;
@@ -35,6 +34,7 @@ body {
 
 /* logo */
 .logo {
+  font-size: 32px;
   text-align: center;
 }
 
@@ -75,19 +75,9 @@ body {
   background-color: #fff;
 }
 
-/* nav */
-#nav {
-  text-align: center;
-}
-#nav li {
-  display: inline-block;
-  margin: 0 20px;
-}
-
 /* about */
 .about {
   clear: both;
-  margin: 20px 0 0;
 }
 .about .social {
   text-align: center;
@@ -96,4 +86,12 @@ body {
   display: inline-block;
   margin: 0 10px;
   font-size: 24px;
+}
+
+/* -------------------------------------
+ * aboveFooter
+------------------------------------- */
+.aboveFooter {
+  // 50px + 15px * 2 + 24px * 1.6 = 68.4px
+  min-height: calc(100vh - 118.4px);
 }
