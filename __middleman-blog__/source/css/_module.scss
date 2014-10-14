@@ -112,11 +112,9 @@
 /* pagination */
 .pagination {
   clear: both;
-  margin: 40px 0 0;
-  // text-align: center;
+  margin: 60px 0 0;
 }
 .pagination ul {
-  // display: inline-block;
 }
 .pagination li,
 .pagination .sibling {
@@ -134,6 +132,11 @@
   box-sizing: border-box;
   text-align: center;
   line-height: 32px;
+  transition: border-color .2s;
+}
+.pagination li a:hover,
+.pagination .sibling a:hover {
+  border-color: $link-base-color;
 }
 /* active */
 .pagination li span {

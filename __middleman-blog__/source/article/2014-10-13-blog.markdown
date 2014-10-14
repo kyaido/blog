@@ -2,6 +2,10 @@
 title: ブログを作りました
 date: 2014-10-13
 tags: web
+
+page_description: web
+og_title: web
+og_description: web
 ---
 
 ## 目的
