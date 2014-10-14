@@ -1,11 +1,19 @@
 ---
 title: ブログを作りました
+description: web
 date: 2014-10-13
 tags: web
-
-page_description: web
-og_title: web
-og_description: web
 ---
 
+## 誰
+
+なんか色々作る会社のマークアップチームというところに所属しています。
+
 ## 目的
+
+調べたことのアウトプット。
+
+## 構成
+
+middlemanのblog機能を使用して構築しました。  
+middlemanというかRubyというかRailsというかそのあたりの知識が乏しいので厳しい戦いでした。
