@@ -12,4 +12,4 @@ env:
     - GIT_COMMITTER_EMAIL="kamehameha1985@gmail.com"
     - GIT_AUTHOR_NAME="kyaido"
     - GIT_AUTHOR_EMAIL="kamehameha1985@gmail.com"
-    # - secure: ""
+    - secure: "PDsGp0UWu4OtqvbMaMsEGlXU0PU5/HTQ87b8EnpacF3zSgYCBh80uaL2148+bfYGdJ5T3vtMBIqIYKNPfvtcu+Gnn8h7teRlskr8PQbWyIYqSL/o/LMgyMHp5xkXVq42oSzZu6a1GNxAmoKtVjWoQQ+8qMSx4xyCQ78+q12mdZE="
