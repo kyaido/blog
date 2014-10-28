@@ -20,3 +20,4 @@ middlemanのblog機能を使用して構築しました。
 middlemanというかRubyというかRailsというかそのあたりの知識が乏しいので厳しい戦いでした。
 
 test
+test
