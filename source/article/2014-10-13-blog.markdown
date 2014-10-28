@@ -15,5 +15,6 @@ tags: web
 
 ## 構成
 
+middleman + github pages + Travis CI。  
 middlemanのblog機能を使用して構築しました。  
 middlemanというかRubyというかRailsというかそのあたりの知識が乏しいので厳しい戦いでした。
