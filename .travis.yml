@@ -1,7 +1,7 @@
 language: ruby
 rvm: 2.0.0
 before_script:
-  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$GH_TOKEN" ]'
+  - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$GH_TOKEN" ] && rake setup'
 script: rake build
 after_success:
   - '[ "$TRAVIS_BRANCH" == "master" ] && [ "$GH_TOKEN" ] && rake publish'
