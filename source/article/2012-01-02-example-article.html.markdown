@@ -24,6 +24,12 @@ tags: example
 
 ### h3要素です
 
+![画像です](http://placehold.it/1280x680/27709b/ffffff)
+
+![画像です](http://placehold.it/640x340/27709b/ffffff)
+
+![画像です](http://placehold.it/640x340/27709b/ffffff)
+
 * リストです
 * リストです  
 リストです  
