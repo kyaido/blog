@@ -30,6 +30,10 @@ tags: example
 
 ![画像です](http://placehold.it/640x340/27709b/ffffff)
 
+<div class="iframeWrapper">
+  <iframe src="//www.youtube.com/embed/bQWxxdGsSSk" allowfullscreen></iframe>
+</div>
+
 * リストです
 * リストです  
 リストです  

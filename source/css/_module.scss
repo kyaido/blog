@@ -80,6 +80,20 @@
     #fff 100%
   );
 }
+.entry .iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin: 1em 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.entry .iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .entry .entryContent a {
   color: $link-base-color;
 }
