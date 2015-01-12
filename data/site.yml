@@ -1,12 +1,9 @@
-title: blog.kdksk.com
-description: blog.kdksk.com - Web開発の話題を中心としたブログです。
-url: http://kdksk.com/blog
+title: blog.tohounikureru.com
+description: blog.tohounikureru.com - 途方にくれないためのブログです。
+url: http://blog.tohounikureru.com
 
 author:
   name: kyaido
-
-twitter:
-  url: https://twitter.com/kyaido
 
 github:
   url: https://github.com/kyaido
