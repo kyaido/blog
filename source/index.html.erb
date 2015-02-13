@@ -15,6 +15,7 @@ per_page: 10
 </section>
 
 <%# http://www.slevenbits.com/blog/2013/01/middleman-blog-pagination.html %>
+<% if num_pages > 1 %>
 <div class="pagination">
   <ul>
     <% (page_number - 2 .. page_number + 2).select{|i| i > 0 && i <= num_pages}.each do |i| %>
@@ -45,3 +46,4 @@ per_page: 10
     </p>
   <% end %>
 </div>
+<% end %>
