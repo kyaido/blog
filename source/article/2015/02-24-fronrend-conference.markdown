@@ -3,7 +3,6 @@ title: Frontrend Conferenceに参加しました
 description: Frontrend Conferenceに参加した話。
 date: 2015-02-24
 tags: web
-published: false
 ---
 
 2015年2月21日開催の、[Frontrend Conference](http://frontrend.github.io/conference/)に参加しました。  
