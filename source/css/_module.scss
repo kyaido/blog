@@ -87,6 +87,9 @@
 .entry .entryContent h3 + * {
   margin-top: .5em;
 }
+.entry .entryContent h2 + h3 {
+  margin-top: 1.5em;
+}
 .entry .iframeWrapper {
   position: relative;
   width: 100%;
