@@ -119,6 +119,14 @@
   border: #ccc 1px solid;
   font-family: monospace;
 }
+.entry .entryShare {
+  margin: 50px 0 0;
+}
+.entry .entryShare li {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  vertical-align: top;
+}
 
 
 /* archive */
