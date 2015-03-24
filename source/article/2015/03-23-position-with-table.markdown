@@ -1,6 +1,6 @@
 ---
-title: table要素の中でpositionがabsoluteな要素の挙動について調べた
-description: table要素の中でpositionがrelativeな要素の挙動について調べたの話。
+title: table関連の要素に対するposition:relative;の挙動について調べた
+description: table関連の要素の中での絶対配置された要素の起点がどこになるかを調べた話。
 date: 2015-03-23
 tags: web
 published: false
@@ -46,19 +46,21 @@ CodeGridの上記の記事を見返していたら、table関連の要素に対�
 ということで、CSS3に基づいているブラウザであれば、table内での絶対配置も問題ないはずです。  
 実際に各ブラウザで検証してみました。
 
-検証には下記のHTMLを使用しました。
+検証には下記のHTMLを使用しました。  
+各セルのボーダーの内側上下左右に赤色のボックスが絶対配置されているのが望ましい挙動になります。
 
 <iframe width="100%" height="300" src="//jsfiddle.net/kyaido/nn4uw8pf/embedded/result,html,css,js/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
 
 ### Google Chrome 41
 
 問題なし
 
 
-### firefox 36
+### Firefox 36
 
-問題あり（後述）
+問題あり（後述）  
+topとleftの値を0にしていても、ボーダーとの間が1px空いてしまう  
+border-collapseの指定をseparateにすると直る
 
 
 ### IE11
@@ -78,7 +80,9 @@ CodeGridの上記の記事を見返していたら、table関連の要素に対�
 
 ### IE8
 
-CODEPENがIE8に未対応のため検証できず…
+問題あり  
+topとleftの値を0にしていても、ボーダーの上にボックスが重なってしまう  
+border-collapseの指定をseparateにすると直る
 
 
 ### mobile safari (iOS 7.1.2)
@@ -86,11 +90,24 @@ CODEPENがIE8に未対応のため検証できず…
 問題なし
 
 
-### Android Browser (Android 4.1.1 Genymotion)
+### Android Browser (Android 4.1.1, Genymotion)
 
 問題なし
 
 
-### Android Browser (Android 2.3.7 Genymotion)
+### Android Browser (Android 2.3.7, Genymotion)
 
-問題なし
+問題あり  
+CSS2.1の仕様に則った挙動
+
+---
+
+## 雑感
+
+対応ブラウザに注意は必要ですが、table内での絶対配置は問題なく使用できそうです。  
+
+IE8とAndroid 2.3.7に関しては、対応しなくてもよい環境も多いと思うのでとりあえず無視します。  
+問題となるのはFirefoxの挙動ですが、検証のコードではtableの要素に`border-collapse: collapse`を指定しています。  
+この指定を`border-collapse: separate`に変更すれば期待通りの位置に絶対配置されるようなので、一応の対応にはなります。  
+
+このあたりのFirefoxの挙動は、別途調査が必要そうです。
