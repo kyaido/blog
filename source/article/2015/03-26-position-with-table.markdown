@@ -1,9 +1,8 @@
 ---
 title: table関連の要素に対するposition:relative;の挙動について調べた
 description: table関連の要素の中での絶対配置された要素の起点がどこになるかを調べた話。
-date: 2015-03-23
+date: 2015-03-26
 tags: web
-published: false
 ---
 
 [CSS再入門 - display: tableの活用 3 \| CodeGrid](https://app.codegrid.net/entry/css-table-3)  
@@ -58,31 +57,29 @@ CodeGridの上記の記事を見返していたら、table関連の要素に対�
 
 ### Firefox 36
 
-問題あり（後述）  
+問題あり  
 topとleftの値を0にしていても、ボーダーとの間が1px空いてしまう  
-border-collapseの指定をseparateにすると直る
 
 
-### IE11
-
-問題なし
-
-
-### IE10
+### IE 11
 
 問題なし
 
 
-### IE9
+### IE 10
 
 問題なし
 
 
-### IE8
+### IE 9
+
+問題なし
+
+
+### IE 8
 
 問題あり  
 topとleftの値を0にしていても、ボーダーの上にボックスが重なってしまう  
-border-collapseの指定をseparateにすると直る
 
 
 ### mobile safari (iOS 7.1.2)
@@ -102,12 +99,10 @@ CSS2.1の仕様に則った挙動
 
 ---
 
-## 雑感
+## まとめ
 
-対応ブラウザに注意は必要ですが、table内での絶対配置は問題なく使用できそうです。  
+対応ブラウザに注意は必要ですが、table内での絶対配置は避けなくても良さそうです。  
 
-IE8とAndroid 2.3.7に関しては、対応しなくてもよい環境も多いと思うのでとりあえず無視します。  
+IE8とAndroid 2.3.7に関しては、対応しなくてもよい環境も多いと思うのでとりあえず無視でも良いかと。  
 問題となるのはFirefoxの挙動ですが、検証のコードではtableの要素に`border-collapse: collapse`を指定しています。  
-この指定を`border-collapse: separate`に変更すれば期待通りの位置に絶対配置されるようなので、一応の対応にはなります。  
-
-このあたりのFirefoxの挙動は、別途調査が必要そうです。
+この指定を`border-collapse: separate`に変更すれば期待通りの位置に絶対配置されるようなので、一応の対応にはなります。
