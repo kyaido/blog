@@ -1,7 +1,7 @@
 ---
 title: firefoxとborder-collapse
 description: firefoxとborder-collapseの話。
-date: 2015-03-31
+date: 2015-12-31
 tags: web
 published: false
 ---

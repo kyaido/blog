@@ -53,7 +53,8 @@
 .entry .entryContent p,
 .entry .entryContent ol,
 .entry .entryContent ul,
-.entry .entryContent pre {
+.entry .entryContent pre,
+.entry .entryContent blockquote {
   margin: 1.5em 0;
 }
 .entry .entryContent ul,
@@ -72,7 +73,7 @@
   margin-bottom: 0;
 }
 .entry .entryContent hr {
-  width: 40%;
+  width: 60%;
   height: 1px;
   margin: 2em auto;
   border: none;
@@ -82,6 +83,14 @@
     #ccc 50%,
     #fff 100%
   );
+}
+.entry .entryContent blockquote {
+  padding: 20px;
+  border: #ccc 1px dotted;
+}
+.entry .entryContent blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .entry .entryContent h2 + *,
 .entry .entryContent h3 + * {
