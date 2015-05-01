@@ -1,0 +1,33 @@
+---
+title: レスポンシブテキスト、スクロールを促す、CSSでfadeToggle
+description: 最近気になっている技術の話。
+date: 2015-05-01
+tags: web
+---
+
+ほとんど自分の備忘録ですが、最近気になってる技術を雑に列記しておきます。
+
+
+## レスポンシブテキスト
+
+v*単位を使ってレスポンシブなテキストを作る方法
+
+* [Viewport Sized Typography \| CSS-Tricks](https://css-tricks.com/viewport-sized-typography/)
+* [Viewport-Relative Headings with Sass](http://sassbreak.com/viewport-relative-headings-with-sass/)
+* [Precise control over responsive typography &middot; MadebyMike](http://madebymike.com.au/writing/precise-control-responsive-typography/)
+
+
+## スクロールアイコン
+
+スクロールを促すアイデア
+
+* [Dear web designer, let’s stop breaking the affordance of scrolling — User Experience Design (UX) — Medium](https://medium.com/user-experience-design-1/dear-web-designer-let-s-stop-breaking-the-affordance-of-scrolling-fe8bf258df7b)
+* [Everybody Scrolls.](http://www.hugeinc.com/ideas/perspective/everybody-scrolls)
+
+
+## CSSだけでfadeToggle
+
+opacityとvisibilityを使ってfadeToggleを実現する
+
+* [CSS3 transitions using visibility and delay](http://www.greywyvern.com/?post=337)
+
